@@ -1,7 +1,9 @@
-setInterval(updateClock, 1000);
+const startTime = new Date();
+const intervalMsec = 20 * 1000;
+setInterval(updateClock, 16);
 function updateClock() {
     const clock = document.querySelector('.clock');
-    clock.innerText = (new Date()).toLocaleTimeString();
+    clock.innerText = (intervalMsec - (new Date() - startTime))/1000;
 }
 
 
